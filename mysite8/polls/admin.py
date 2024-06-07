@@ -7,7 +7,6 @@ class ChoiceInline(admin.TabularInline):
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    # fields = ["pub_date", "question_text"]
     fieldsets = [
         (None,               {"fields": ["question_text"]}),
         ("Date information", {"fields": ["pub_date"]})
@@ -19,4 +18,3 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Question, QuestionAdmin)
-# admin.site.register(Choice)
